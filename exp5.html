@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabProgram_5</title>
+</head>
+<body>
+    <script>
+        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let b = a.filter((n) => {
+            return n%2==0;
+        })
+        console.log(`Displaying even numbers using Higher Order function filter() : ${b}`);
+        let d = a.reduce((ac, cv) => {
+            return ac + cv;
+        })
+        console.log(`The sum of elements using Higher Order Function Reduce() : ${d}`);
+        let f = a.map((n) => {
+            return n*n*n;
+        })
+        console.log(`The Cube of Elements in the given array using Higher Order Function Map() : ${f}`);
+    </script>
+</body>
+</html>
