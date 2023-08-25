@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program-4 Event Bubbling</title>
+    <style>
+        body {
+            background-color: pink;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div {
+            width: max-content;
+            background-color: green;
+            padding: 20px;
+        }
+        span {
+            display: block;
+            padding: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>CLICK ME!</button>
+        </span>
+    </div>
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+        const div = document.getElementsByTagName("div")[0];
+        const span = document.getElementsByTagName("span")[0];
+        const button = document.getElementsByTagName("button")[0];
+        body.addEventListener('click', () => {
+            console.log("body was clicked");
+        });
+        div.addEventListener('click', () => {
+            console.log("div was clicked");
+        });
+        span.addEventListener('click', () => {
+            console.log("span was clicked");
+        });
+        button.addEventListener('click', () => {
+            console.log("button was clicked");
+        });
+    </script>
+</body>
+</html>
